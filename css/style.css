@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: "Roboto", sans-serif;
+  --bc-primary: hsl(231, 78%, 44%);
+  --bc-secundry: hsl(147, 100%, 39%);
+  --bc-third: hsl(231, 99%, 66%);
+  --bc-fourth: hsl(147, 100%, 22%);
+  --fc-primary: hsl(0, 0%, 100%);
+  font-size: 62.5%;
+}
+
+.soon {
+  height: 5rem;
+  margin: 1rem 0 0 1rem;
+}
+header {
+  font-family: var(--ff-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--fc-primary);
+}
+
+.women {
+  animation: disappear 1000ms backwards;
+}
+
+.page {
+  height: 70rem;
+  width: 75rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--bc-third);
+  border-radius: 2rem;
+}
+
+.container {
+  width: 23rem;
+  display: grid;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+.page div h1 {
+  margin-inline: auto;
+  width: 22rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  margin-top: 0.8rem;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.div_1,
+.div_2 {
+  height: 31.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.div_1 div,
+.div_2 div {
+  border-radius: 1.5rem;
+  background: var(--bc-primary);
+  animation: upDown 750ms backwards;
+}
+
+a {
+  width: 22rem;
+  height: 2rem;
+  text-decoration: none;
+  color: var(--fc-primary);
+  background: var(--bc-secundry);
+  border-radius: 0.5rem;
+}
+
+a:hover {
+  background: var(--bc-fourth);
+  transition: 0.5s;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .women {
+    display: none;
+  }
+
+  .page {
+    width: 72rem;
+    margin-right: 0;
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    height: 205rem;
+    width: 25rem;
+    gap: 0;
+  }
+  .div_1,
+  .div_2 {
+    height: 100rem;
+    display: grid;
+  }
+}
