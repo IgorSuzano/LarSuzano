@@ -110,7 +110,17 @@ a:hover {
     opacity: 1;
   }
 }
+@media (max-width: 1024px) {
+  .women {
+    display: none;
+  }
 
+  .page {
+    width: 72rem;
+    margin-right: 0;
+    margin-bottom: 5rem;
+  }
+}
 @media (max-width: 720px) {
   .page {
     height: 205rem;
@@ -123,14 +133,4 @@ a:hover {
     display: grid;
   }
 }
-@media (max-width: 1024px) {
-  .women {
-    display: none;
-  }
 
-  .page {
-    width: 72rem;
-    margin-right: 0;
-    margin-bottom: 5rem;
-  }
-}
